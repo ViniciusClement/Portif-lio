@@ -1,0 +1,106 @@
+//Grid
+$colunas:12;
+$gap:20px;
+
+//Tamanhos de containers
+$grande:1200px;
+$medio:760px;
+$pequeno:480px;
+
+//Medio Screen 
+@mixin disposito($size) {
+  @if $size == grande {
+    @media screen and (min-width:#{$grande}){
+      @content;
+    }
+  }
+  @else if $size == medio {
+    @media screen and (min-width:#{$medio}) and (max-width:#{$grande} - 1){
+      @content;
+    }
+  }
+  @else if $size == pequeno {
+    @media screen and (max-width:$pequeno) {
+      @content;
+    }
+  }
+}
+
+//Grid
+@function grid($quantColunas, $offset:false) {
+  $width: $quantColunas / $colunas * 100%; 
+  $result: calc(#{$width} - #{$gap});
+  @if $offset == offset {
+    $gap: $gap / 2;
+    $result: calc(#{$width} + #{$gap});
+  }
+  @return $result;
+}
+
+//Tamanho das grids
+@for $x from 1 through $colunas {
+  .grid-#{$x} {
+    width: grid($x);
+  }
+}
+
+//Estrutura padrão das grids
+@mixin grid-structure {
+  float: left;
+  min-height: 1px;
+  margin-left: $gap / 2;
+  margin-right: $gap / 2;
+  @include disposito(pequeno) {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+//Incluir a estrutura nas grids
+[class^='grid-']{
+  @include grid-structure;
+}
+
+//Offset
+@for $x from 1 through $colunas {
+  .offset-#{$x} {
+    margin-left: grid($x, offset);
+    @extend %offset;
+  }
+}
+
+//Offset dispositivo pequeno
+//% so irá existir quando for instanciado, quando for chamado.
+@include disposito(pequeno){
+  %offset {
+    margin-left: 0px;
+  }
+}
+
+//ClearFix
+@mixin clearfix {
+  &::after, &::before {
+    content: "";
+    display: table;
+  }
+}
+
+
+//Container
+@mixin container{
+  max-width: $grande;
+  position: relative;
+  margin: 0 auto;
+  @include disposito(medio){
+    max-width: $medio;
+  }
+  @include disposito(pequeno){
+    max-width: $pequeno;
+    padding: 0 10px;
+  }
+  @include clearfix;
+}
+
+
