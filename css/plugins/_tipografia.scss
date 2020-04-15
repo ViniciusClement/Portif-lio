@@ -14,6 +14,7 @@ $fonte-1: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 @mixin titulo($size) {
   font-family: $fonte-1;
   font-weight: bold;
+
   @if $size == 32 {
     font-size: em(32);
     line-height: em(50,32);
@@ -34,7 +35,7 @@ $fonte-1: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   }
   @else if $size == 20 {
     font-size: em(20);
-    line-height: em(22, 20);
+    line-height: em(30, 20);
   }
 }
 
@@ -44,7 +45,7 @@ $fonte-1: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   font-weight: regular;
   @if $size == 18 {
     font-size: em(18);
-    line-height: em(18, 18);
+    line-height: em(24, 16);
   }
 }
 
@@ -52,8 +53,7 @@ $fonte-1: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 $corPrincipal: #3B4BDC;
 $corTitulo: #262626;
 $corTexto: #656363;
-$lightGray: #EFEFEF;
-$lightDark: #262626;
+$lightGray: #DCDCDC;
 $dark: #070707;
 
 //Button

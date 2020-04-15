@@ -170,7 +170,7 @@ nav {
   padding: 25px 0 25px 50px; }
   nav .logo {
     padding: 5px 0;
-    color: #EFEFEF;
+    color: #DCDCDC;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 24px; }
@@ -181,7 +181,7 @@ nav {
     nav ul a {
       display: block;
       font-size: 24px;
-      color: #EFEFEF;
+      color: #DCDCDC;
       padding: 5px 10px; }
 
 .info-container {
@@ -190,16 +190,130 @@ nav {
   transform: translateY(30%); }
   .info-container .info-header {
     text-align: center;
-    margin-top: 50px; }
+    margin-top: 50px;
+    font-weight: bold; }
     .info-container .info-header span {
       text-transform: uppercase;
-      font-weight: bold;
       font-size: 6.25em;
       color: #3B4BDC; }
     .info-container .info-header p {
       margin: 10px 0 50px 0;
       font-size: 3.125em;
       text-transform: uppercase;
-      color: #EFEFEF; }
+      color: #DCDCDC; }
+  .info-container img {
+    margin-right: 50px; }
+
+.section-empresa {
+  background-color: #DCDCDC; }
+  .section-empresa .empresa {
+    display: flex;
+    align-items: center;
+    height: 50vw; }
+    .section-empresa .empresa .info-empresa {
+      margin: 0 auto;
+      text-align: center;
+      margin-left: 50px; }
+      .section-empresa .empresa .info-empresa h2 {
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 2em;
+        line-height: 1.5625em;
+        margin-bottom: 30px;
+        color: #262626; }
+      .section-empresa .empresa .info-empresa p {
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: regular;
+        font-size: 1.125em;
+        line-height: 1.5em;
+        color: #656363; }
+    .section-empresa .empresa img {
+      width: 500px;
+      margin-right: 50px; }
+
+.trabalho .header-trabalho {
+  margin-top: 100px;
+  text-align: center; }
+  .trabalho .header-trabalho h2 {
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.5625em;
+    color: #262626; }
+  .trabalho .header-trabalho p {
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: regular;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    margin-bottom: 80px;
+    margin: 20px auto 70px auto;
+    color: #656363;
+    width: 37.5em; }
+.trabalho .lista-trabalho {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 1; }
+  .trabalho .lista-trabalho li {
+    width: 300px;
+    height: 350px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.336);
+    padding: 20px 0px;
+    background-color: white;
+    text-align: center; }
+    .trabalho .lista-trabalho li img {
+      max-height: 100px; }
+    .trabalho .lista-trabalho li .content-trabalho {
+      padding: 0 20px; }
+      .trabalho .lista-trabalho li .content-trabalho h3 {
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 1.5em;
+        line-height: 1.6666666667em;
+        color: #262626;
+        margin-bottom: 20px; }
+      .trabalho .lista-trabalho li .content-trabalho p {
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: regular;
+        font-size: 1.125em;
+        line-height: 1.5em;
+        color: #656363; }
+
+.fundo {
+  background-color: #3B4BDC;
+  height: 100vh;
+  z-index: 0;
+  transform: translateY(-25%); }
+  .fundo .servicos {
+    margin-top: 15.625em; }
+    .fundo .servicos .content-servicos {
+      text-align: center; }
+      .fundo .servicos .content-servicos h2 {
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 2em;
+        line-height: 1.5625em;
+        color: white;
+        margin-bottom: 0.625em; }
+      .fundo .servicos .content-servicos p {
+        font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: regular;
+        font-size: 1.25em;
+        line-height: 1.5em;
+        color: white;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        width: 400px; }
+    .fundo .servicos .essays-servicos {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .fundo .servicos .essays-servicos li {
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        color: #262626; }
+        .fundo .servicos .essays-servicos li span {
+          display: block; }
 
 /*# sourceMappingURL=style.css.map */

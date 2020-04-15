@@ -49,9 +49,9 @@ nav {
   .info-header {
     text-align: center;
     margin-top: 50px;  
+    font-weight:bold;
     span {
       text-transform: uppercase;
-      font-weight:bold;
       font-size: em(100);
       color: $corPrincipal;
     }
@@ -62,4 +62,139 @@ nav {
       color:$lightGray;
     }
   }
+  img {
+    margin-right: 50px;
+  }
 }
+
+// Section Empresa
+.section-empresa {
+  background-color: $lightGray;
+  
+  .empresa {
+    display:flex;
+    align-items: center;
+    height: 50vw;
+  
+    .info-empresa {
+      margin: 0 auto;
+      text-align: center;
+      margin-left: 50px;
+  
+      h2 {
+        @include titulo(32);  
+        margin-bottom: 30px;
+        color: $corTitulo;
+      }
+      p {
+        @include paragrafo(18);
+        color: $corTexto;
+      }
+    }
+    img {
+      width: 500px;
+      margin-right: 50px;
+    }
+  }
+}
+
+//Section Nosso Trabalho
+.trabalho {
+
+  .header-trabalho {
+    margin-top:100px;
+    text-align: center;
+
+    h2 {
+      @include titulo(32);
+      color: $corTitulo;
+    }
+    p {
+      @include sub-titulo(20);
+      margin-bottom:80px;
+      margin:20px auto 70px auto;
+      color:$corTexto;
+      width: em(600);
+    }
+  }
+
+  .lista-trabalho {
+    display:flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+
+    li {
+      width: 300px;
+      height: 350px;
+      box-shadow:1px 1px 10px rgba(0, 0, 0, 0.336);
+      padding:20px 0px;
+      background-color: white;
+      text-align: center;
+      
+      img {
+        max-height: 100px;  
+      }
+      .content-trabalho{
+        padding:0 20px;
+
+        h3 {
+          @include titulo(24);
+          color:$corTitulo;
+          margin-bottom:20px;
+        }
+        p {
+         @include paragrafo(18); 
+         color:$corTexto;
+        }
+      }
+    }
+  }
+}
+  
+.fundo {
+  background-color:$corPrincipal;
+  height: 100vh;
+  z-index: 0;
+  transform: translateY(-25%);
+  
+  .servicos {
+    margin-top:em(250);
+    
+    .content-servicos {
+      text-align: center;
+    
+      h2 {
+        @include titulo(32);
+        color:white;
+        margin-bottom:em(10);
+      }
+
+      p {
+        @include sub-titulo(20);
+        color:white;
+        margin:0 auto;
+        margin-bottom: 70px;
+        width: 400px;
+      }
+    } //End content-servicos  
+
+    .essays-servicos {
+      display:flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      li {
+        text-align: center;
+        font-size: em(32);
+        font-weight: bold;
+        color:$corTitulo;
+
+        span{
+          display: block;
+        }
+      } 
+    } //End Essays-servicos
+  } //End Servicos
+} //End Fundo
+
